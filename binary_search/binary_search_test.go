@@ -10,9 +10,9 @@ func TestBinarySearch(t *testing.T) {
 		target int
 		index  int
 	}{
-		{"ElementFoundAtStart", 2, 0},
-		{"ElementFoundInMiddle", 10, 3},
-		{"ElementFoundAtEnd", 40, 4},
+		{"element found at start", 2, 0},
+		{"element found in middle", 10, 3},
+		{"element found at end", 40, 4},
 	}
 
 	for _, tc := range testsFound {

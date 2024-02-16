@@ -1,8 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/hienphamm/go-dsa/verify"
+)
 
 func binarySearch(arr []int, target int) int {
+	if len(arr) == 0 {
+		return -1
+	}
+
 	left := 0
 	right := len(arr) - 1
 
@@ -27,9 +33,5 @@ func main() {
 	arr := []int{2, 5, 10, 20, 50, 80, 200}
 	target := 10
 	result := binarySearch(arr, target)
-	if result != -1 {
-		fmt.Printf("Element %d found at index %d", target, result)
-	} else {
-		fmt.Printf("Element %d not found in the array\n", target)
-	}
+	verify.Verify(result, target)
 }
